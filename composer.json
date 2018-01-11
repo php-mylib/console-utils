@@ -1,0 +1,32 @@
+{
+  "name": "inhere/console-components",
+  "type": "library",
+  "description": "some components for inhere/console",
+  "keywords": ["library", "console","console-color", "command", "components"],
+  "homepage": "https://github.com/inhere/php-console-components",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "inhere",
+      "email": "in.798@qq.com",
+      "homepage": "http://www.yzone.net/"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Inhere\\Console\\Components\\" : "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Inhere\\Console\\Components\\Tests\\" : "tests/"
+    }
+  },
+  "suggest": {
+    "symfony/process": "php process operation",
+    "text/template": "Single-Class string template engine for PHP5/7 supporting if/loops/filters"
+  }
+}
