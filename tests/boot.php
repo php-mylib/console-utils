@@ -20,6 +20,9 @@ spl_autoload_register(function($class)
     } elseif (0 === strpos($class,'Inhere\Console\Components\\')) {
         $path = str_replace('\\', '/', substr($class, strlen('Inhere\Console\Components\\')));
         $file = dirname(__DIR__) . "/src/{$path}.php";
+    } elseif (0 === strpos($class,'Inhere\Console\\')) {
+        $path = str_replace('\\', '/', substr($class, strlen('Inhere\Console\\')));
+        $file = dirname(__DIR__, 2) . "/console/src/{$path}.php";
     }
 
     if ($file && is_file($file)) {

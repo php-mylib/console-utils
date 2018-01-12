@@ -7,9 +7,8 @@
  */
 
 use Inhere\Console\Components\ExecComparator;
-use Inhere\Console\Utils\CliUtil;
 
-require dirname(__DIR__, 2) . '/tests/boot.php';
+require dirname(__DIR__) . '/tests/boot.php';
 
 $common = <<<CODE
     \$text = 'hello, world!';
@@ -24,14 +23,36 @@ CODE;
 $code2 = <<<CODE
     strpos(\$text, 'wor');
 CODE;
-// var_dump(CliUtil::getTempDir());die;
+
 $ec = new ExecComparator();
 $ec
     ->setCommon($common)
     ->setLoops(1000000)
-    ->setSample1($code1)
-    ->setSample2($code2);
+    ->setSample1($code1, 'preg_match')
+    ->setSample2($code2, 'strpos');
 
-$ret = $ec->compare();
+$ec->compare();
 
-print_r($ret);
+echo $ec->getResults('md');
+
+// var_dump($ec);
+
+/*
+Code execution speed comparison
+
+- loop times: 1000000
+- sample1(preg_match) VS sample2(strpos)
+
+DETAIL
+
+item      sample 1   sample 2    diff(1 - 2)
+time      0.536    0.48099     0.055 s
+memory    0 b     0 b      0 k
+
+RESULT
+
+- Run faster is: strpos
+- Consume more memory is: strpos
+- Test the total time spent: 1.022 s
+
+ */
