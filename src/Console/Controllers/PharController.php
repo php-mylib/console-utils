@@ -6,15 +6,15 @@
  * Time: 9:08
  */
 
-namespace Inhere\Console\Components\Controller;
+namespace Inhere\Extra\Console\Controllers;
 
-use Inhere\Console\Components\PharBuilder;
-use Inhere\Console\Components\PharCompiler;
+use Inhere\Extra\Console\PharBuilder;
+use Inhere\Extra\Console\PharCompiler;
 use Inhere\Console\Controller;
 
 /**
  * Class PharController
- * @package Inhere\Console\Components\Controller
+ * @package Inhere\Extra\Console\Controllers
  */
 class PharController extends Controller
 {

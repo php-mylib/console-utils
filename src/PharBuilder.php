@@ -6,13 +6,13 @@
  * Time: 11:39
  */
 
-namespace Inhere\Console\Components;
+namespace Inhere\Extra\Console;
 
 use Inhere\Console\Utils\Helper;
 
 /**
  * Class PharBuilder
- * @package Inhere\Console\Components
+ * @package Inhere\Extra\Console
  */
 class PharBuilder
 {

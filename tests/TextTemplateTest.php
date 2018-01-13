@@ -6,15 +6,15 @@
  * Time: 15:32
  */
 
-namespace Inhere\Console\Components\Tests;
+namespace Inhere\Extra\Tests;
 
-use Inhere\Console\Components\TextTemplate;
+use Inhere\Extra\Components\TextTemplate;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class TextTemplateTest
  * @package Inhere\Console\Tests\Components
- * @covers TextTemplate
+ * @covers \Inhere\Extra\Components\TextTemplate
  */
 class TextTemplateTest extends TestCase
 {

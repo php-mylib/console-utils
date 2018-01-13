@@ -6,11 +6,11 @@
  * Time: 21:30
  */
 
-namespace Inhere\Console\Components;
+namespace Inhere\Extra\Components;
 
 /**
  * Class TextTemplate
- * @package Inhere\Console\Components
+ * @package Inhere\Extra\Components
  */
 class TextTemplate
 {

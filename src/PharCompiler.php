@@ -6,13 +6,13 @@
  * Time: 17:57
  */
 
-namespace Inhere\Console\Components;
+namespace Inhere\Extra\Console;
 
 use Phar;
 
 /**
  * Class PharCompiler
- * @package Inhere\Console\Components
+ * @package Inhere\Extra\Console
  * @ref Psy\Compiler (package psy/psysh)
  */
 class PharCompiler

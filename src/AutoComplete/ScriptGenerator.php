@@ -6,15 +6,15 @@
  * Time: 23:13
  */
 
-namespace Inhere\Console\Components\AutoComplete;
+namespace Inhere\Extra\AutoComplete;
 
-use Inhere\Console\Components\TextTemplate;
+use Inhere\Extra\Components\TextTemplate;
 
 /**
  * Class ScriptGenerator
  * - ref linux system '/etc/bash_completion.d/'
  * - generate bash/zsh auto complete script for current console application.
- * @package Inhere\Console\Components\AutoComplete
+ * @package Inhere\Extra\AutoComplete
  * @link http://www.linuxidc.com/Linux/2016-10/136201.htm
  */
 class ScriptGenerator

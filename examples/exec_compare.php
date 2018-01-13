@@ -6,7 +6,7 @@
  * Time: 19:36
  */
 
-use Inhere\Console\Components\ExecComparator;
+use Inhere\Extra\Components\ExecComparator;
 
 require dirname(__DIR__) . '/tests/boot.php';
 

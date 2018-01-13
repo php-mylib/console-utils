@@ -1,9 +1,9 @@
 {
-  "name": "inhere/console-components",
+  "name": "inhere/extra-components",
   "type": "library",
-  "description": "some components for inhere/console",
-  "keywords": ["library", "console","console-color", "command", "components"],
-  "homepage": "https://github.com/inhere/php-console-components",
+  "description": "some extra components for php",
+  "keywords": ["library", "console", "console-color", "command", "components"],
+  "homepage": "https://github.com/inhere/php-extra-components",
   "license": "MIT",
   "authors": [
     {
@@ -17,12 +17,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Inhere\\Console\\Components\\" : "src/"
+      "Inhere\\Extra\\" : "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Inhere\\Console\\Components\\Tests\\" : "tests/"
+      "Inhere\\Extra\\Tests\\" : "tests/"
     }
   },
   "suggest": {

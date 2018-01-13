@@ -6,13 +6,13 @@
  * Time: 16:48
  */
 
-namespace Inhere\Console\Components\Controller;
+namespace Inhere\Extra\Console\Controllers;
 
 use Inhere\Console\Controller;
 
 /**
  * Class GenController
- * @package Inhere\Console\Components\Controller
+ * @package Inhere\Extra\Console\Controllers
  */
 class GenController extends Controller
 {

@@ -6,13 +6,13 @@
  * Time: 9:51
  */
 
-namespace Inhere\Console\Components;
+namespace Inhere\Extra\Components;
 
 use Inhere\Console\Utils\CliUtil;
 
 /**
  * Class ExecComparator - PHP code exec speed comparator
- * @package Inhere\Console\Components
+ * @package Inhere\Extra\Components
  */
 class ExecComparator
 {
