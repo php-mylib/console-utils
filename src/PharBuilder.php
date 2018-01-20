@@ -167,19 +167,21 @@ class PharBuilder
     {
         // Stubs
         //        $phar->setStub($this->getStub());
-        return \Phar::createDefaultStub($this->options['cliIndex'], $this->options['webIndex']);
+        // return \Phar::createDefaultStub($this->options['cliIndex'], $this->options['webIndex']);
 
         // 设置入口
-        //        return "<?php
-        //Phar::mapPhar('{$pharName}');
-        //require 'phar://{$pharName}/examples/app';
-        //__HALT_COMPILER();
-        /*?>";*/
+        return <<<EOF
+<?php
+
+Phar::mapPhar('{$pharName}');
+require 'phar://{$pharName}/examples/app';
+__HALT_COMPILER(); 
+EOF;
     }
 
     /**
-    * @return int|mixed
-    */
+     * @return int|mixed
+     */
     private function selectSignatureType()
     {
         if ($this->signatureType) {
@@ -194,14 +196,12 @@ class PharBuilder
             }
         }
 
-        // Is there any PHP Version out there that does not support at least SHA-1?
-        // But hey, fallback to md5, better than nothing
-        return \Phar::MD5;
+        return \Phar::SHA1;
     }
 
     /**
-    * @return callable
-    */
+     * @return callable
+     */
     public function getIteratorFilter(): callable
     {
         return $this->iteratorFilter ?: function (\SplFileInfo $file) {
@@ -209,16 +209,16 @@ class PharBuilder
 
             // Skip hidden files and directories.
             if ($name[0] === '.') {
-            return false;
+                return false;
             }
 
             if ($file->isDir()) {
-            // Only recurse into intended subdirectories.
-            return preg_match($this->options['dirExclude'], $name);
+                // Only recurse into intended subdirectories.
+                return preg_match($this->options['dirExclude'], $name);
             }
 
             if (\in_array($name, $this->options['fileInclude'], true)) {
-            return true;
+                return true;
             }
 
             // Only consume files of interest.
@@ -227,9 +227,9 @@ class PharBuilder
     }
 
     /**
-    * @param callable $iteratorFilter
-    * @return $this
-    */
+     * @param callable $iteratorFilter
+     * @return $this
+     */
     public function setIteratorFilter(callable $iteratorFilter)
     {
         $this->iteratorFilter = $iteratorFilter;
@@ -238,9 +238,9 @@ class PharBuilder
     }
 
     /**
-    * @param resource $key
-    * @return $this
-    */
+     * @param resource $key
+     * @return $this
+     */
     public function setKey($key)
     {
         $this->key = $key;
@@ -249,16 +249,16 @@ class PharBuilder
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getOptions(): array
     {
         return $this->options;
     }
 
     /**
-    * @param array $options
-    */
+     * @param array $options
+     */
     public function setOptions(array $options)
     {
         $this->options = $options;
