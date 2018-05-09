@@ -4,6 +4,12 @@
 [![Php Version](https://img.shields.io/badge/php-%3E=7.0-brightgreen.svg?maxAge=2592000)](https://packagist.org/packages/inhere/console)
 [![Latest Stable Version](http://img.shields.io/packagist/v/inhere/console.svg)](https://packagist.org/packages/inhere/console)
 
+## some utils
+
+- ascii font
+- sepcial char 
+- char animation
+
 ### 代码执行比较器
 
 ```php
@@ -67,3 +73,4 @@ phpunit
 ## License
 
 MIT
+
